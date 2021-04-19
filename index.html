@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <section class="header">
     <div class="header_left">
         <div class="header_left-logo">
-            <img src="./assets/svg/logo.svg" alt="logo">
-            <div class="header_left-logo-h3">BOOKS | Academy</div>
+            <div class="header_left-logo-svg">
+                <img src="assets/svg/logo.svg" alt="logo" height="23px" width="23px">
+            </div>
+            <div class="header_left-logo-h3">
+                <h3>BOOKS | Academy</h3>
+            </div>
         </div>
-        <div class="header_left-search"></div>
+        <div class="header_left-search">
+            <div class="header_left-search-span">
+                <span>Поиск</span>
+            </div>
+            <div class="header_left-search-svg">
+                <img src="assets/svg/search.svg" alt="search" height="16px" width="16px">
+            </div>
+        </div>
     </div>
     <div class="header_right ">
         <div class="header_right-link"><a href="">Главная</a></div>
@@ -21,13 +34,54 @@
     </div>
 </section>
 <section class="first-screen">
-    <div class="first-screen_bg"></div>
+    <div class="first-screen_bg">
+        <img src="assets/img/library_main_background.png" alt="background" width="100%">
+    </div>
     <div class="first-screen_left">
         <div class="first-screen_left-h1"></div>
         <div class="first-screen_left-text"></div>
         <button class="first-screen_left-button">Читать</button>
     </div>
     <div class="first-screen_right"></div>
+</section>
+<section class="books">
+    <div class="books_top">
+        <button class="books_top-button">Ещё</button>
+    </div>
+    <div class="books_main">
+        <div class="books_main-menu">
+            <div class="main-h2"></div>
+            <div class="books_main-link"><a href="">Все</a></div>
+            <div class="books_main-link"><a href="">Фантастика</a></div>
+            <div class="books_main-link"><a href="">Фэнтези</a></div>
+            <div class="books_main-link"><a href="">Детективы</a></div>
+            <div class="books_main-link"><a href="">Ужасы</a></div>
+            <div class="books_main-link"><a href="">Приключения</a></div>
+        </div>
+        <div class="books_main-cards-container">
+            <div class="books_main-card">
+                <div class="books_main-card-left"></div>
+                <div class="books_main-card-right"></div>
+            </div>
+            <div class="books_main-card">
+                <div class="books_main-card-left"></div>
+                <div class="books_main-card-right"></div>
+            </div>
+            <div class="books_main-card">
+                <div class="books_main-card-left"></div>
+                <div class="books_main-card-right"></div>
+            </div>
+            <div class="books_main-card">
+                <div class="books_main-card-left">
+                    <div class="books-main-card-left-image"></div>
+                    <div class="books-main-card-left-buttons">
+                        <button class="books_main-card-left-buttons-more-details"></button>
+                    </div>
+                </div>
+                <div class="books_main-card-right"></div>
+            </div>
+        </div>
+    </div>
 </section>
 </body>
 </html>
