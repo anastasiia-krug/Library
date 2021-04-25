@@ -12,7 +12,7 @@ h3 {
     line-height: 25px;
 }
 
-p, span {
+p {
     font-family: 'Noto Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -39,40 +39,57 @@ p, span {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 201px;
     height: 33px;
     margin-left: 46px;
+
+}
+
+.header_left-logo >a{
+    display: flex;
+    text-decoration: none;
+    color: #EEEEEE;
 }
 
 .header_left-logo-svg {
     width: 23px;
     height: 23px;
+    margin-right: 10px;
 }
 
-.header_left-logo-h3 a{
+.header_left-logo-h3{
     width: 158px;
     height: 25px;
-    text-decoration: none;
-    color: #EEEEEE;
 }
 
 .header_left-search {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 77px;
     height: 19px;
 }
 
-.header_left-search-span {
-    width: 42px;
+.header_left-search-input {
     height: 19px;
+    margin-right: 16px;
     color: #FFFFFF;
+    background: none;
+    outline: none;
+    border: none;
+    text-align: right;
 }
 
-.header_left-search-svg {
+::placeholder {
+    color: #EEEEEE;
+    text-align: right;
+}
+
+.header_left-search-button {
     width: 17px;
     height: 17px;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
 .header_right {
