@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+.h1-bold {
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 112%;
+}
+
 h3 {
     font-family: 'Noto Sans', sans-serif;
     font-style: normal;
@@ -111,7 +119,7 @@ p {
     color: #FFFFFF;
 }
 
-.header_nav-link a:hover {
+.header_nav-link :hover {
     border-bottom: 1px solid #FFFFFF;
 }
 
@@ -123,11 +131,15 @@ p {
 }
 
 .first-screen_left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
     width: calc(50% + 130px);
     height: 100vh;
-    background: rgba(33, 33, 33, 0.35);
-    filter: blur(8px);
-    backdrop-filter: blur(10px);
 }
 
 .first-screen_wrapper {
@@ -135,7 +147,25 @@ p {
 }
 
 .first-screen_h1 {
+    color: #FFFFFF;
+}
 
+.first-screen_hr {
+    width: 176px;
+    height: 1px;
+    background: #FFFFFF;
+}
+
+.first-screen_left-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: calc(50% + 130px);
+    height: 100vh;
+    background: rgba(33, 33, 33, 0.35);
+    filter: blur(8px);
+    backdrop-filter: blur(10px);
 }
 
 .books_main {
