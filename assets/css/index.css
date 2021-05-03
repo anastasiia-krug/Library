@@ -227,19 +227,22 @@ h3 {
 
 .books_main {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    flex-wrap: wrap;
 }
 
 .books_h2 {
+    width: 100%;
+    margin-top: 2rem;
     text-align: center;
     color: #212121;
 }
 
 .books_menu {
     display: flex;
-    margin-top: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1.25rem 0 3rem 0;
 }
 
 .books_menu-link {
@@ -249,10 +252,14 @@ h3 {
 }
 
 .books_cards-container {
-
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card {
     width: 27rem;
     height: 18.125rem;
+    margin: 1rem;
+    border-radius: 0.25rem;
+    background: antiquewhite;
 }
