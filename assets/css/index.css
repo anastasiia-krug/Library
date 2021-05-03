@@ -20,12 +20,20 @@
     line-height: 2rem;
 }
 
-h3 {
+.h3 {
     font-family: 'Noto Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
-    line-height: 25px;
+    line-height: 1.5625rem;
+}
+
+.h3-bold {
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
 }
 
 .h4 {
@@ -50,6 +58,14 @@ h3 {
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 19px;
+}
+
+.span {
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1rem;
 }
 
 .button {
@@ -257,9 +273,93 @@ h3 {
 }
 
 .card {
+    display: flex;
     width: 27rem;
     height: 18.125rem;
     margin: 1rem;
     border-radius: 0.25rem;
-    background: antiquewhite;
+    background: #FFFFFF;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(33, 33, 33, 0.15);
+}
+
+.card_left {
+    width: 11rem;
+    height: 100%;
+}
+
+.card_img {
+    position: relative;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.card_button {
+    position: relative;
+    bottom: 2.75rem;
+    z-index: 3;
+    width: 11rem;
+    height: 2.5rem;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.card_right {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.card_right-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 16rem;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.card_h3 {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    color: #212121;
+}
+
+.card_p {
+    width: 100%;
+    margin-bottom: 0.3125rem;
+    white-space: pre-line;
+    color: #212121;
+}
+
+.card_caption {
+    width: 100%;
+    margin-bottom: 0.25rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.625rem;
+    line-height: 0.875rem;
+    text-align: right;
+    color: #A9A9A9;
+}
+
+.card_right-bottom {
+    display: flex;
+    width: 16rem;
+    border-top: 0.0625rem solid #F2F2F2;
+    padding: 0.625rem 0 0.625rem;
+}
+
+.card_genre {
+    width: 75%;
+    border-right: 0.0625rem solid #F2F2F2;
+    color: #4F4F4F;
+    text-align: center;
+}
+
+.card_price {
+    width: 25%;
+    color: #212121;
+    text-align: center;
 }
