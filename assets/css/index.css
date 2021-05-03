@@ -269,7 +269,9 @@
 
 .books_cards-container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    max-height: 52rem;
 }
 
 .card {
