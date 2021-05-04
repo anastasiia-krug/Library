@@ -57,7 +57,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 0.875rem;
-    line-height: 19px;
+    line-height: 1.1875rem;
 }
 
 .span {
@@ -81,7 +81,7 @@
     z-index: 9999;
     display: flex;
     width: 100%;
-    height: 79px;
+    height: 4.9375rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -92,14 +92,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(50% + 130px);
+    width: calc(50% + 8.125rem);
 }
 
 .header_logo {
     display: flex;
     align-items: center;
-    height: 33px;
-    margin-left: 46px;
+    height: 2.0625rem;
+    margin-left: 2.875rem;
 }
 
 .header_logo >a{
@@ -109,21 +109,21 @@
 }
 
 .header_logo-svg {
-    width: 23px;
-    height: 23px;
-    margin-right: 10px;
+    width: 1.4375rem;
+    height: 1.4375rem;
+    margin-right: 0.625rem;
 }
 
 .header_search {
     display: flex;
     align-items: center;
-    height: 19px;
-    margin-right: 40px;
+    height: 1.1875rem;
+    margin-right: 2.5rem;
 }
 
 .header_search-input {
-    height: 19px;
-    margin-right: 16px;
+    height: 1.1875rem;
+    margin-right: 1rem;
     color: #FFFFFF;
     background: none;
     outline: none;
@@ -137,8 +137,8 @@
 }
 
 .header_search-button {
-    width: 17px;
-    height: 17px;
+    width: 1.0625rem;
+    height: 1.0625rem;
     background: none;
     outline: none;
     border: none;
@@ -149,7 +149,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(50% - 130px);
+    width: calc(50% - 8.625rem);
 }
 
 .header_nav {
@@ -157,19 +157,19 @@
 }
 
 .header_nav-link {
-    padding: 0 4px 7px 4px;
-    margin-left: 56px;
+    padding: 0 0.25rem 0.4375rem 0.25rem;
+    margin-left: 3.5rem;
     font-family: 'Noto Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 0.875rem;
-    line-height: 19px;
+    line-height: 1.1875rem;
     text-decoration: none;
     color: #FFFFFF;
 }
 
-.header_nav-link :hover {
-    border-bottom: 1px solid #FFFFFF;
+.header_nav-link:hover {
+    border-bottom: 0.0625rem solid #FFFFFF;
 }
 
 .first-screen {
@@ -187,7 +187,7 @@
     z-index: 2;
     display: flex;
     align-items: center;
-    width: calc(50% + 130px);
+    width: calc(50% + 8.125rem);
     height: 100vh;
     color: #FFFFFF;
 }
@@ -219,11 +219,11 @@
     top: 0;
     bottom: 0;
     left: 0;
-    width: calc(50% + 130px);
+    width: calc(50% + 8.125rem);
     height: 100vh;
     background: rgba(33, 33, 33, 0.35);
-    filter: blur(8px);
-    backdrop-filter: blur(10px);
+    filter: blur(0.5rem);
+    backdrop-filter: blur(0.625rem);
 }
 
 .first-screen_right-button {
