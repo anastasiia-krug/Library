@@ -1,78 +1,27 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        library
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <section class="first-screen">
+    <div class="first-screen_left">
+      <div class="wrapper">
+        <h1 class="first-screen_h1 h1-bold">Что такое Books Academy?</h1>
+        <div class="first-screen_hr"></div>
+        <p class="first-screen_text h4">Войдите в светлый мир двенадцатилетнего мальчика и проживите с ним лето, наполненное радостными и печальными, загадочными и тревожными событиями.
+
+          Лето, когда каждый день совершаются удивительные открытия, главное из которых - ты живой, ты дышишь, ты чувствуешь!</p>
+        <div class="first-screen_left-text"></div>
+        <button class="first-screen_left-button button p">Читать</button>
       </div>
     </div>
-  </div>
+    <div class="first-screen_left-background"></div>
+    <div class="first-screen_right">
+      <button class="first-screen_right-button button p">Ещё</button>
+    </div>
+  </section>
 </template>
 
 <script>
-import Logo from '/components/Logo'
-export default {
-  components: {
-    Logo
-  }
-}
+
+export default {}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
