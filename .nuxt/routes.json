@@ -1,0 +1,9 @@
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/opt/lampp/htdocs/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2853e77a"
+  }
+]
