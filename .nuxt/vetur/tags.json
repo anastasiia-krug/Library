@@ -1,5 +1,11 @@
 {
-  "Header": {
-    "description": "Auto imported from components/Header.vue"
+  "HomeBooks": {
+    "description": "Auto imported from components/home/Books.vue"
+  },
+  "HomeFirstScreen": {
+    "description": "Auto imported from components/home/FirstScreen.vue"
+  },
+  "LayoutsHeader": {
+    "description": "Auto imported from components/layouts/Header.vue"
   }
 }
