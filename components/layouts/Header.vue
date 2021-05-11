@@ -1,12 +1,7 @@
 <template>
   <section class="header">
     <div class="header_left">
-      <div class="header_logo">
-        <nuxt-link to="/">
-          <img class="header_logo-svg" src="../../assets/svg/logo.svg" alt="logo" height="23px" width="23px">
-          <h3 class="header_logo-h3 h3">BOOKS | Academy</h3>
-        </nuxt-link>
-      </div>
+      <Logo />
       <div class="header_search">
         <input class="header_search-input" type="search" placeholder="Поиск">
         <button class="header_search-button">
@@ -41,25 +36,6 @@
   justify-content: space-between;
   align-items: center;
   width: calc(50% + 8.125rem);
-}
-
-.header_logo {
-  display: flex;
-  align-items: center;
-  height: 2.0625rem;
-  margin-left: 2.875rem;
-}
-
-.header_logo >a{
-  display: flex;
-  text-decoration: none;
-  color: #EEEEEE;
-}
-
-.header_logo-svg {
-  width: 1.4375rem;
-  height: 1.4375rem;
-  margin-right: 0.625rem;
 }
 
 .header_search {
@@ -120,3 +96,13 @@
   border-bottom: 0.0625rem solid #FFFFFF;
 }
 </style>
+
+<script>
+import Logo from '@/components/layouts/Logo.vue'
+
+export default {
+  components: {
+    Logo
+  }
+}
+</script>

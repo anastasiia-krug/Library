@@ -1,11 +1,20 @@
 {
+  "HomeAuthors": {
+    "description": "Auto imported from components/home/Authors.vue"
+  },
   "HomeBooks": {
     "description": "Auto imported from components/home/Books.vue"
   },
   "HomeFirstScreen": {
     "description": "Auto imported from components/home/FirstScreen.vue"
   },
+  "LayoutsFooter": {
+    "description": "Auto imported from components/layouts/Footer.vue"
+  },
   "LayoutsHeader": {
     "description": "Auto imported from components/layouts/Header.vue"
+  },
+  "LayoutsLogo": {
+    "description": "Auto imported from components/layouts/Logo.vue"
   }
 }
