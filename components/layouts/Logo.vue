@@ -12,7 +12,6 @@
   display: flex;
   align-items: center;
   height: 2.0625rem;
-  margin-left: 2.875rem;
 }
 
 .logo >a{

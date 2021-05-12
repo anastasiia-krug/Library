@@ -1,7 +1,7 @@
 <template>
   <section class="header">
     <div class="header_left">
-      <Logo />
+      <Logo class="header_logo" />
       <div class="header_search">
         <input class="header_search-input" type="search" placeholder="Поиск">
         <button class="header_search-button">
@@ -36,6 +36,10 @@
   justify-content: space-between;
   align-items: center;
   width: calc(50% + 8.125rem);
+}
+
+.header_logo {
+  margin-left: 2.875rem;
 }
 
 .header_search {

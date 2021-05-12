@@ -22,6 +22,12 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+}
+
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
