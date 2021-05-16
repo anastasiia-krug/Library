@@ -12,3 +12,4 @@ You can directly use them in pages and other components without the need to impo
 - `<LayoutsFooter>` | `<layouts-footer>` (components/layouts/Footer.vue)
 - `<LayoutsHeader>` | `<layouts-header>` (components/layouts/Header.vue)
 - `<LayoutsLogo>` | `<layouts-logo>` (components/layouts/Logo.vue)
+- `<LayoutsSearch>` | `<layouts-search>` (components/layouts/Search.vue)

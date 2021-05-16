@@ -87,6 +87,14 @@ export default {
   line-height: 1.1875rem;
 }
 
+.p-bold {
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+}
+
 .span {
   font-family: 'Noto Sans', sans-serif;
   font-style: normal;

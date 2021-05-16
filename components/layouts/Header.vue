@@ -2,12 +2,7 @@
   <section class="header">
     <div class="header_left">
       <Logo class="header_logo" />
-      <div class="header_search">
-        <input class="header_search-input" type="search" placeholder="Поиск">
-        <button class="header_search-button">
-          <img src="../../assets/svg/search.svg" alt="search" height="17px" width="17px">
-        </button>
-      </div>
+      <Search class="header_search" />
     </div>
     <div class="header_right ">
       <div class="header_nav">
@@ -43,34 +38,7 @@
 }
 
 .header_search {
-  display: flex;
-  align-items: center;
-  height: 1.1875rem;
   margin-right: 2.5rem;
-}
-
-.header_search-input {
-  height: 1.1875rem;
-  margin-right: 1rem;
-  color: #FFFFFF;
-  background: none;
-  outline: none;
-  border: none;
-  text-align: right;
-}
-
-::placeholder {
-  color: #EEEEEE;
-  text-align: right;
-}
-
-.header_search-button {
-  width: 1.0625rem;
-  height: 1.0625rem;
-  background: none;
-  outline: none;
-  border: none;
-  cursor: pointer;
 }
 
 .header_right {
@@ -103,10 +71,12 @@
 
 <script>
 import Logo from '@/components/layouts/Logo.vue'
+import Search from '@/components/layouts/Search.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Search
   }
 }
 </script>

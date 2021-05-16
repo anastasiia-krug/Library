@@ -3,17 +3,20 @@
     <div class="footer_main">
       <div class="footer_main-container">
         <Logo class="footer_logo" />
-        <div class="footer_nav">
-          <div class="footer_left-nav">
-            <nuxt-link class="footer_nav-link h4" to="/">Главная</nuxt-link>
-            <nuxt-link class="footer_nav-link h4" to="">Все книги</nuxt-link>
-            <nuxt-link class="footer_nav-link h4" to="">Избранное</nuxt-link>
+        <div class="footer_nav-and-search-container">
+          <div class="footer_nav">
+            <div class="footer_left-nav">
+              <nuxt-link class="footer_nav-link h4" to="/">Главная</nuxt-link>
+              <nuxt-link class="footer_nav-link h4" to="">Все книги</nuxt-link>
+              <nuxt-link class="footer_nav-link h4" to="">Избранное</nuxt-link>
+            </div>
+            <div class="footer_right-nav">
+              <nuxt-link class="footer_nav-link h4" to="/">Политика конфиденциальности</nuxt-link>
+              <nuxt-link class="footer_nav-link h4" to="">Политика приватности</nuxt-link>
+              <nuxt-link class="footer_nav-link h4" to="">Пользовательское соглашение</nuxt-link>
+            </div>
           </div>
-          <div class="footer_right-nav">
-            <nuxt-link class="footer_nav-link h4" to="/">Политика конфиденциальности</nuxt-link>
-            <nuxt-link class="footer_nav-link h4" to="">Политика приватности</nuxt-link>
-            <nuxt-link class="footer_nav-link h4" to="">Пользовательское соглашение</nuxt-link>
-          </div>
+          <Search class="footer_search" />
         </div>
       </div>
     </div>
@@ -49,6 +52,12 @@
   margin: 0 6rem 0 2.5rem;
 }
 
+.footer_nav-and-search-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
 .footer_nav {
   display: flex;
   height: 100%;
@@ -77,6 +86,10 @@
   text-decoration: none;
 }
 
+.footer_search {
+  margin-right: 2.5rem;
+}
+
 .footer_copyright {
   display: flex;
   align-items: center;
@@ -93,10 +106,12 @@
 
 <script>
 import Logo from '@/components/layouts/Logo.vue'
+import Search from '@/components/layouts/Search.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Search
   }
 }
 </script>

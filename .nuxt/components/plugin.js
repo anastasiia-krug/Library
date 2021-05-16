@@ -7,7 +7,8 @@ const components = {
   HomeFirstScreen: () => import('../../components/home/FirstScreen.vue' /* webpackChunkName: "components/home-first-screen" */).then(c => wrapFunctional(c.default || c)),
   LayoutsFooter: () => import('../../components/layouts/Footer.vue' /* webpackChunkName: "components/layouts-footer" */).then(c => wrapFunctional(c.default || c)),
   LayoutsHeader: () => import('../../components/layouts/Header.vue' /* webpackChunkName: "components/layouts-header" */).then(c => wrapFunctional(c.default || c)),
-  LayoutsLogo: () => import('../../components/layouts/Logo.vue' /* webpackChunkName: "components/layouts-logo" */).then(c => wrapFunctional(c.default || c))
+  LayoutsLogo: () => import('../../components/layouts/Logo.vue' /* webpackChunkName: "components/layouts-logo" */).then(c => wrapFunctional(c.default || c)),
+  LayoutsSearch: () => import('../../components/layouts/Search.vue' /* webpackChunkName: "components/layouts-search" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {

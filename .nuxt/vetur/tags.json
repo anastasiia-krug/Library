@@ -16,5 +16,8 @@
   },
   "LayoutsLogo": {
     "description": "Auto imported from components/layouts/Logo.vue"
+  },
+  "LayoutsSearch": {
+    "description": "Auto imported from components/layouts/Search.vue"
   }
 }
