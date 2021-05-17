@@ -9,6 +9,7 @@ You can directly use them in pages and other components without the need to impo
 - `<HomeAuthors>` | `<home-authors>` (components/home/Authors.vue)
 - `<HomeBooks>` | `<home-books>` (components/home/Books.vue)
 - `<HomeFirstScreen>` | `<home-first-screen>` (components/home/FirstScreen.vue)
+- `<LayoutsBookCard>` | `<layouts-book-card>` (components/layouts/BookCard.vue)
 - `<LayoutsFooter>` | `<layouts-footer>` (components/layouts/Footer.vue)
 - `<LayoutsHeader>` | `<layouts-header>` (components/layouts/Header.vue)
 - `<LayoutsLogo>` | `<layouts-logo>` (components/layouts/Logo.vue)

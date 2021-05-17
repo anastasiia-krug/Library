@@ -54,6 +54,7 @@
 
 .header_nav-link {
   padding: 0 0.25rem 0.4375rem 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0);
   margin-left: 3.5rem;
   font-family: 'Noto Sans', sans-serif;
   font-style: normal;
@@ -65,7 +66,7 @@
 }
 
 .header_nav-link:hover {
-  border-bottom: 0.0625rem solid #FFFFFF;
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 1);
 }
 </style>
 

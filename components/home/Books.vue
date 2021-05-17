@@ -15,32 +15,14 @@
         <div class="wrapper">
           <div class="books_wrapper">
             <div class="books_cards-container">
-              <div class="book-card">
-                <div class="book-card_left">
-                  <img class="book-card_img" src="../../assets/img/harry_potter_and_the_philosophers_stone.png"
-                       alt="Harry Potter and the philosopher's stone">
-                  <button class="book-card_button button span">Подробнее...</button>
-                </div>
-                <div class="book-card_right">
-                  <div class="book-card_right-top">
-                    <h3 class="book-card_h3 h3-bold">Гарри Поттер и философский камень</h3>
-                    <p class="book-card_p p">Одиннадцатилетний мальчик-сирота живет в семье тетки и даже не подозревает, что он — волшебник...
-
-                      И однажды, ему приходит письмо, изменив его жизнь навсегда...</p>
-                    <p class="book-card_caption">Джоан Роулинг</p>
-                  </div>
-                  <div class="book-card_right-bottom">
-                    <div class="book-card_genre h4">Фэнтези</div>
-                    <div class="book-card_price h4-bold">620 ₴</div>
-                  </div>
-                </div>
-              </div>
+              <BookCard v-for="(book,book_key) in books"/>
             </div>
           </div>
         </div>
         <div class="books_button-container">
-          <button class="books_slider-button">
-            <img class="books_slider-svg" src="../../assets/svg/arrow-right.svg" alt="right arrow" width="2rem" height="4rem">
+          <button class="books_slider-button" v-bind:class="{'books_slider-button-active':button}" v-on:click="booksScroll">
+            <img class="books_slider-svg" src="../../assets/svg/arrow-right.svg" alt="right arrow" width="2rem"
+                 height="4rem">
           </button>
         </div>
       </div>
@@ -51,7 +33,8 @@
 <style>
 .books {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  margin: 2rem 0;
   background: #FFFFFF;
 }
 
@@ -62,7 +45,6 @@
 
 .books_h2 {
   width: 100%;
-  margin-top: 2rem;
   text-align: center;
   color: #212121;
 }
@@ -99,98 +81,6 @@
   max-height: 52rem;
 }
 
-.book-card {
-  display: flex;
-  width: 27rem;
-  height: 18.125rem;
-  margin: 1rem;
-  border-radius: 0.25rem;
-  background: #FFFFFF;
-  box-shadow: 0.25rem 0.25rem 1rem rgba(33, 33, 33, 0.15);
-}
-
-.book-card_left {
-  width: 11rem;
-  height: 100%;
-}
-
-.book-card_img {
-  position: relative;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-}
-
-.book-card_button {
-  position: relative;
-  bottom: 2.75rem;
-  z-index: 3;
-  width: 11rem;
-  height: 2.5rem;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.book-card_right {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-}
-
-.book-card_right-top {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  width: 16rem;
-  padding: 1rem 1rem 0 1.5rem;
-}
-
-.book-card_h3 {
-  width: 100%;
-  margin-bottom: 0.5rem;
-  color: #212121;
-}
-
-.book-card_p {
-  width: 100%;
-  margin-bottom: 0.3125rem;
-  white-space: pre-line;
-  color: #212121;
-}
-
-.book-card_caption {
-  width: 100%;
-  margin-bottom: 0.25rem;
-  font-family: 'Noto Sans', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 0.625rem;
-  line-height: 0.875rem;
-  text-align: right;
-  color: #A9A9A9;
-}
-
-.book-card_right-bottom {
-  display: flex;
-  width: 16rem;
-  border-top: 0.0625rem solid #F2F2F2;
-  padding: 0.625rem 0 0.625rem;
-}
-
-.book-card_genre {
-  width: 75%;
-  border-right: 0.0625rem solid #F2F2F2;
-  color: #4F4F4F;
-  text-align: center;
-}
-
-.book-card_price {
-  width: 25%;
-  color: #212121;
-  text-align: center;
-}
-
 .books_button-container {
   display: flex;
   justify-content: flex-end;
@@ -213,9 +103,55 @@
   border: none;
   cursor: pointer;
 }
+.books_slider-button-active{
+  transform: rotate(180deg);
+}
 
 .books_slider-svg {
   width: 2rem;
   height: 4rem;
 }
 </style>
+
+<script>
+import BookCard from '@/components/layouts/BookCard.vue'
+
+export default {
+  components: {
+    BookCard
+  },
+
+  data() {
+    return {
+      books: [
+        {}, {}, {}, {}, {}, {}, {}, {},
+      ],
+      button: false,
+    }
+  },
+
+  methods: {
+    booksScroll(event) {
+      if (event &&
+          event.srcElement &&
+          event.srcElement.parentElement &&
+          event.srcElement.parentElement.parentElement &&
+          event.srcElement.parentElement.parentElement.parentElement &&
+          event.srcElement.parentElement.parentElement.parentElement.children &&
+          event.srcElement.parentElement.parentElement.parentElement.children.length > 0 &&
+          event.srcElement.parentElement.parentElement.parentElement.children[0] &&
+          event.srcElement.parentElement.parentElement.parentElement.children[0].children.length > 0 &&
+          event.srcElement.parentElement.parentElement.parentElement.children[0].children[0]._prevClass === 'books_wrapper') {
+        let scrollObj = event.srcElement.parentElement.parentElement.parentElement.children[0].children[0];
+        if(scrollObj.scrollLeft === 0) {
+          scrollObj.scrollTo({left: 1000, behavior: 'smooth'})
+          this.button = true;
+        } else {
+          scrollObj.scrollTo({left: 0, behavior: 'smooth'})
+          this.button = false;
+        }
+      }
+    }
+  }
+}
+</script>

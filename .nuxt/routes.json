@@ -1,5 +1,12 @@
 [
   {
+    "name": "all-books",
+    "path": "/all-books",
+    "component": "/opt/lampp/htdocs/pages/all-books.vue",
+    "chunkName": "pages/all-books",
+    "_name": "_ddf76722"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/opt/lampp/htdocs/pages/index.vue",

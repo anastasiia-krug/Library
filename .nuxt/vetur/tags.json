@@ -8,6 +8,9 @@
   "HomeFirstScreen": {
     "description": "Auto imported from components/home/FirstScreen.vue"
   },
+  "LayoutsBookCard": {
+    "description": "Auto imported from components/layouts/BookCard.vue"
+  },
   "LayoutsFooter": {
     "description": "Auto imported from components/layouts/Footer.vue"
   },
