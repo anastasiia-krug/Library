@@ -1,14 +1,14 @@
 <template>
   <div>
-    <Header/>
+    <Header class="header-secondary" />
     <Nuxt/>
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from '@/components/layouts/Header.vue'
-import Footer from '@/components/layouts/Footer.vue'
+import Header from '@/components/layouts/Header.vue';
+import Footer from '@/components/layouts/Footer.vue';
 
 export default {
   components: {
@@ -114,5 +114,10 @@ export default {
 
 .wrapper {
   margin: 0 6rem 0 6rem;
+}
+
+.header-secondary {
+  height: 4rem;
+  background: #0B6880;
 }
 </style>

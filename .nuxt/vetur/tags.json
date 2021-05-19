@@ -1,4 +1,7 @@
 {
+  "Books": {
+    "description": "Auto imported from components/Books.vue"
+  },
   "HomeAuthors": {
     "description": "Auto imported from components/home/Authors.vue"
   },

@@ -1,5 +1,6 @@
 import { wrapFunctional } from './utils'
 
+export { default as Books } from '../../components/Books.vue'
 export { default as HomeAuthors } from '../../components/home/Authors.vue'
 export { default as HomeBooks } from '../../components/home/Books.vue'
 export { default as HomeFirstScreen } from '../../components/home/FirstScreen.vue'
@@ -9,6 +10,7 @@ export { default as LayoutsHeader } from '../../components/layouts/Header.vue'
 export { default as LayoutsLogo } from '../../components/layouts/Logo.vue'
 export { default as LayoutsSearch } from '../../components/layouts/Search.vue'
 
+export const LazyBooks = import('../../components/Books.vue' /* webpackChunkName: "components/books" */).then(c => wrapFunctional(c.default || c))
 export const LazyHomeAuthors = import('../../components/home/Authors.vue' /* webpackChunkName: "components/home-authors" */).then(c => wrapFunctional(c.default || c))
 export const LazyHomeBooks = import('../../components/home/Books.vue' /* webpackChunkName: "components/home-books" */).then(c => wrapFunctional(c.default || c))
 export const LazyHomeFirstScreen = import('../../components/home/FirstScreen.vue' /* webpackChunkName: "components/home-first-screen" */).then(c => wrapFunctional(c.default || c))

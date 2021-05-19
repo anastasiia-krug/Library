@@ -7,16 +7,18 @@
 </template>
 
 <script>
-import FirstScreen from '@/components/home/FirstScreen.vue'
-import Books from '@/components/home/Books.vue'
-import Authors from '@/components/home/Authors.vue'
+import FirstScreen from '@/components/home/FirstScreen.vue';
+import Books from '@/components/home/Books.vue';
+import Authors from '@/components/home/Authors.vue';
 
 export default {
   components: {
     FirstScreen,
     Books,
     Authors
-  }
+  },
+
+  layout: 'home'
 }
 </script>
 

@@ -7,6 +7,20 @@
     "_name": "_ddf76722"
   },
   {
+    "name": "auth-SignIn",
+    "path": "/auth/SignIn",
+    "component": "/opt/lampp/htdocs/pages/auth/SignIn.vue",
+    "chunkName": "pages/auth/SignIn",
+    "_name": "_3644075a"
+  },
+  {
+    "name": "auth-SignUp",
+    "path": "/auth/SignUp",
+    "component": "/opt/lampp/htdocs/pages/auth/SignUp.vue",
+    "chunkName": "pages/auth/SignUp",
+    "_name": "_4ada5dd0"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/opt/lampp/htdocs/pages/index.vue",

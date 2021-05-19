@@ -7,12 +7,24 @@
     <div class="header_right ">
       <div class="header_nav">
         <nuxt-link class="header_nav-link" to="/">Главная</nuxt-link>
-        <nuxt-link class="header_nav-link" to="">Все книги</nuxt-link>
+        <nuxt-link class="header_nav-link" to="/all-books">Все книги</nuxt-link>
         <nuxt-link class="header_nav-link" to="">Кабинет</nuxt-link>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+import Logo from '@/components/layouts/Logo.vue'
+import Search from '@/components/layouts/Search.vue'
+
+export default {
+  components: {
+    Logo,
+    Search
+  }
+}
+</script>
 
 <style>
 .header {
@@ -69,15 +81,3 @@
   border-bottom: 0.0625rem solid rgba(255, 255, 255, 1);
 }
 </style>
-
-<script>
-import Logo from '@/components/layouts/Logo.vue'
-import Search from '@/components/layouts/Search.vue'
-
-export default {
-  components: {
-    Logo,
-    Search
-  }
-}
-</script>

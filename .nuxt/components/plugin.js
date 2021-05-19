@@ -2,6 +2,7 @@ import Vue from 'vue'
 import { wrapFunctional } from './utils'
 
 const components = {
+  Books: () => import('../../components/Books.vue' /* webpackChunkName: "components/books" */).then(c => wrapFunctional(c.default || c)),
   HomeAuthors: () => import('../../components/home/Authors.vue' /* webpackChunkName: "components/home-authors" */).then(c => wrapFunctional(c.default || c)),
   HomeBooks: () => import('../../components/home/Books.vue' /* webpackChunkName: "components/home-books" */).then(c => wrapFunctional(c.default || c)),
   HomeFirstScreen: () => import('../../components/home/FirstScreen.vue' /* webpackChunkName: "components/home-first-screen" */).then(c => wrapFunctional(c.default || c)),
