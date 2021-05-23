@@ -16,6 +16,7 @@ export default {
 
 <style>
 .all-books {
-  margin-top: 4rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 </style>
