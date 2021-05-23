@@ -17,8 +17,6 @@ export default {
     Books,
     Authors
   },
-
-  layout: 'home'
 }
 </script>
 

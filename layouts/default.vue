@@ -1,8 +1,11 @@
 <template>
   <div>
-    <Header class="header-secondary" />
+    <Header v-bind:class="{'header-secondary':$route.name!=='index'}" />
+
+    <Header class='header-secondary' v-if="$route.name!=='index'"/>
+    <Header v-else/>
     <Nuxt/>
-    <Footer />
+    <Footer v-if="$route.name!=='auth-SignIn' && $route.name!=='auth-SignUp'" />
   </div>
 </template>
 
@@ -14,6 +17,8 @@ export default {
   components: {
     Header,
     Footer
+  }, mounted() {
+    console.log(this.$route)
   }
 }
 </script>
