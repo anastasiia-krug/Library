@@ -1,22 +1,22 @@
 <template>
   <div>
     <Header v-bind:class="{'header-secondary':$route.name!=='index'}" />
-
-    <Header class='header-secondary' v-if="$route.name!=='index'"/>
-    <Header v-else/>
-    <Nuxt/>
+    <Nuxt v-bind:class="{'background-blurring':true}" />
     <Footer v-if="$route.name!=='auth-SignIn' && $route.name!=='auth-SignUp'" />
+    <SignUp />
   </div>
 </template>
 
 <script>
 import Header from '@/components/layouts/Header.vue';
 import Footer from '@/components/layouts/Footer.vue';
+import SignUp from '@/components/auth/SignUp.vue';
 
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    SignUp
   }, mounted() {
     console.log(this.$route)
   }
@@ -48,6 +48,14 @@ export default {
   font-family: 'Noto Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.h2-bold {
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -124,5 +132,11 @@ export default {
 .header-secondary {
   height: 4rem;
   background: #0B6880;
+}
+
+.background-blurring {
+  filter: blur(4rem);
+  height: 100%;
+  background: rgba(33, 33, 33, 0.22);
 }
 </style>

@@ -7,6 +7,8 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<Books>` | `<books>` (components/Books.vue)
+- `<AuthSignIn>` | `<auth-sign-in>` (components/auth/SignIn.vue)
+- `<AuthSignUp>` | `<auth-sign-up>` (components/auth/SignUp.vue)
 - `<HomeAuthors>` | `<home-authors>` (components/home/Authors.vue)
 - `<HomeBooks>` | `<home-books>` (components/home/Books.vue)
 - `<HomeFirstScreen>` | `<home-first-screen>` (components/home/FirstScreen.vue)
@@ -15,3 +17,4 @@ You can directly use them in pages and other components without the need to impo
 - `<LayoutsHeader>` | `<layouts-header>` (components/layouts/Header.vue)
 - `<LayoutsLogo>` | `<layouts-logo>` (components/layouts/Logo.vue)
 - `<LayoutsSearch>` | `<layouts-search>` (components/layouts/Search.vue)
+- `<UiInput>` | `<ui-input>` (components/ui/input.vue)

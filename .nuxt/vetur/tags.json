@@ -2,6 +2,12 @@
   "Books": {
     "description": "Auto imported from components/Books.vue"
   },
+  "AuthSignIn": {
+    "description": "Auto imported from components/auth/SignIn.vue"
+  },
+  "AuthSignUp": {
+    "description": "Auto imported from components/auth/SignUp.vue"
+  },
   "HomeAuthors": {
     "description": "Auto imported from components/home/Authors.vue"
   },
@@ -25,5 +31,8 @@
   },
   "LayoutsSearch": {
     "description": "Auto imported from components/layouts/Search.vue"
+  },
+  "UiInput": {
+    "description": "Auto imported from components/ui/input.vue"
   }
 }
