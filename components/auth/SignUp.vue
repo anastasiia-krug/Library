@@ -1,7 +1,7 @@
 <template>
   <div class="sign-up">
     <h2 class="sign-up_h2 h2-bold">Регистрация</h2>
-    <ui_input />
+    <ui_input icon="lock"/>
   </div>
 </template>
 

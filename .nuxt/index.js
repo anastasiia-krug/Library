@@ -13,7 +13,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_plugin_5d9d0865 from 'nuxt_plugin_plugin_5d9d0865' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_axios_6ae4e2fb from 'nuxt_plugin_axios_6ae4e2fb' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_nuxtsvgsprite_30e38059 from 'nuxt_plugin_nuxtsvgsprite_30e38059' // Source: ./nuxt-svg-sprite.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -181,8 +181,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_plugin_5d9d0865(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_6ae4e2fb === 'function') {
-    await nuxt_plugin_axios_6ae4e2fb(app.context, inject)
+  if (typeof nuxt_plugin_nuxtsvgsprite_30e38059 === 'function') {
+    await nuxt_plugin_nuxtsvgsprite_30e38059(app.context, inject)
   }
 
   // Lock enablePreview in context
@@ -194,7 +194,7 @@ async function createApp(ssrContext, config = {}) {
 
   // Wait for async component to be resolved first
   await new Promise((resolve, reject) => {
-    router.push(app.context.route.fullPath, resolve, (err) => {
+    router.replace(app.context.route.fullPath, resolve, (err) => {
       // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
       if (!err._isRouter) return reject(err)
       if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()

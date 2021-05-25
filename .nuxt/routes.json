@@ -1,5 +1,11 @@
 [
   {
+    "name": "icons-list",
+    "path": "/_icons",
+    "component": "/opt/lampp/htdocs/node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue",
+    "_name": "_1df7e39a"
+  },
+  {
     "name": "all-books",
     "path": "/all-books",
     "component": "/opt/lampp/htdocs/pages/all-books.vue",

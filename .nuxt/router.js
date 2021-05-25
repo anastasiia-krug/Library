@@ -4,6 +4,7 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _1df7e39a = () => interopDefault(import('../node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue' /* webpackChunkName: "" */))
 const _ddf76722 = () => interopDefault(import('../pages/all-books.vue' /* webpackChunkName: "pages/all-books" */))
 const _2853e77a = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -19,6 +20,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/_icons",
+    component: _1df7e39a,
+    name: "icons-list"
+  }, {
     path: "/all-books",
     component: _ddf76722,
     name: "all-books"
