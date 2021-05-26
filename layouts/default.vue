@@ -3,20 +3,20 @@
     <Header v-bind:class="{'header-secondary':$route.name!=='index'}" />
     <Nuxt v-bind:class="{'background-blurring':true}" />
     <Footer v-if="$route.name!=='auth-SignIn' && $route.name!=='auth-SignUp'" />
-    <SignUp />
+    <SignIn />
   </div>
 </template>
 
 <script>
 import Header from '@/components/layouts/Header.vue';
 import Footer from '@/components/layouts/Footer.vue';
-import SignUp from '@/components/auth/SignUp.vue';
+import SignIn from '@/components/auth/SignIn.vue';
 
 export default {
   components: {
     Header,
     Footer,
-    SignUp
+    SignIn
   }, mounted() {
     console.log(this.$route)
   }

@@ -3,14 +3,15 @@
     <div class="input_icon">
       <svg-icon :name="icon" />
     </div>
-    <input class="input_input p">
+    <input class="input_input p" :placeholder="input_placeholder">
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    icon: ''
+    icon: '',
+    input_placeholder: ''
   }
 }
 </script>
@@ -25,14 +26,17 @@ export default {
 }
 
 .input_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 3.125rem;
   height: 100%;
   background: #009688;
 }
 
 .input_icon svg{
-  width: 3.125rem;
-  height: 3rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .input_input {

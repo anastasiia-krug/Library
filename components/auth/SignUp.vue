@@ -1,7 +1,11 @@
 <template>
   <div class="sign-up">
     <h2 class="sign-up_h2 h2-bold">Регистрация</h2>
-    <ui_input icon="lock"/>
+    <ui_input icon="name" input_placeholder="Имя" class="sign-up_input" />
+    <ui_input icon="door-key" input_placeholder="Пароль" class="sign-up_input" />
+    <ui_input icon="lock" input_placeholder="Повторите пароль" class="sign-up_input" />
+    <ui_input icon="tickets-couple" input_placeholder="Читательский билет" class="sign-up_input" />
+    <button class="sign-up_button button p">Зарегистрироваться</button>
   </div>
 </template>
 
@@ -32,5 +36,14 @@ export default {
   margin-bottom: 2.375rem;
   text-align: center;
   color: #FFFFFF;
+}
+
+.sign-up_input {
+  margin-bottom: 2rem;
+}
+
+.sign-up_button {
+  width: 19.5rem;
+  height: 2.5rem;
 }
 </style>
