@@ -1,6 +1,8 @@
 // state
 export const state = () => ({
-    users: []
+    user: null,
+    previewBooks: null,
+    books: null,
 })
 
 // getters
