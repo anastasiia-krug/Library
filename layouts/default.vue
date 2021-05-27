@@ -1,9 +1,12 @@
 <template>
   <div>
     <Header v-bind:class="{'header-secondary':$route.name!=='index'}" />
-    <Nuxt v-bind:class="{'background-blurring':true}" />
+    <Nuxt />
+<!--        v-bind:class="{'background-blurring':true}" -->
+
     <Footer v-if="$route.name!=='auth-SignIn' && $route.name!=='auth-SignUp'" />
-    <SignIn />
+<!--    <SignIn />-->
+<!--    <SignUp />-->
   </div>
 </template>
 
@@ -11,12 +14,14 @@
 import Header from '@/components/layouts/Header.vue';
 import Footer from '@/components/layouts/Footer.vue';
 import SignIn from '@/components/auth/SignIn.vue';
+import SignUp from '@/components/auth/SignUp.vue';
 
 export default {
   components: {
     Header,
     Footer,
-    SignIn
+    SignIn,
+    SignUp
   }, mounted() {
     console.log(this.$route)
   }
