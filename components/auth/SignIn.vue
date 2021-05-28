@@ -1,10 +1,10 @@
 <template>
-  <div class="sign-in">
+  <form class="sign-in" @submit.prevent="submit">
     <h2 class="sign-in_h2 h1-bold">Авторизация</h2>
-    <ui_input icon="name" input_placeholder="Имя" class="sign-in_input" />
-    <ui_input icon="door-key" input_placeholder="Пароль" class="sign-in_input" />
-    <button class="sign-in_button button p">Войти</button>
-  </div>
+    <ui_input icon="name" input_placeholder="E-mail" v-model="form.email" class="sign-in_input" type="text"/>
+    <ui_input icon="door-key" input_placeholder="Пароль" v-model="form.password" class="sign-in_input" type="password" />
+    <button class="sign-in_button button p" v-on:click="signIn">Войти</button>
+  </form>
 </template>
 
 <script>
@@ -13,6 +13,26 @@ import ui_input from '@/components/ui/input.vue';
 export default {
   components: {
     ui_input
+  },
+  data(){
+    return {
+      form:{
+        email:'',
+        password: '',
+      }
+    }
+  },
+  methods:{
+    async signIn() {
+      try {
+        await this.$axios.$get('sanctum/csrf-cookie')
+        await this.$auth.loginWith('local', { data: this.form })
+      } catch (e) {
+      }
+    },
+    submit(){
+      return false;
+    }
   }
 }
 </script>

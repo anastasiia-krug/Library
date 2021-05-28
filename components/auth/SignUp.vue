@@ -1,11 +1,11 @@
 <template>
   <div class="sign-up">
     <h2 class="sign-up_h2 h2-bold">Регистрация</h2>
-    <ui_input icon="name" input_placeholder="Имя" class="sign-up_input" />
-    <ui_input icon="door-key" input_placeholder="Пароль" class="sign-up_input" />
-    <ui_input icon="lock" input_placeholder="Повторите пароль" class="sign-up_input" />
-    <ui_input icon="tickets-couple" input_placeholder="Читательский билет" class="sign-up_input" />
-    <button class="sign-up_button button p">Зарегистрироваться</button>
+    <ui_input icon="name" input_placeholder="E-mail" v-model="form.email" class="sign-up_input" type="email"/>
+    <ui_input icon="door-key" input_placeholder="Пароль"v-model="form.password" class="sign-up_input" type="password"/>
+    <ui_input icon="lock" input_placeholder="Повторите пароль" v-model="form.passwordRepeat" class="sign-up_input" type="password"/>
+    <ui_input icon="tickets-couple" input_placeholder="Читательский билет" v-model="form.library_сard" class="sign-up_input" type="text"/>
+    <button class="sign-up_button button p" v-on:click="signUp()">Зарегистрироваться</button>
   </div>
 </template>
 
@@ -15,6 +15,33 @@ import ui_input from '@/components/ui/input.vue';
 export default {
   components: {
     ui_input
+  },
+  data(){
+    return {
+      form:{
+        email:'',
+        password: '',
+        passwordRepeat: '',
+        library_сard: '',
+      }
+    }
+  },
+  methods:{
+    async signUp() {
+      try {
+        await this.$axios.$get('sanctum/csrf-cookie')
+        if(this.form.password && this.form.passwordRepeat && this.form.password === this.form.passwordRepeat) {
+          const responce = await this.$axios.$post('/register', this.form)
+          if (!responce.errors) {
+            await this.$auth.fetchUser()
+          }
+        }
+      } catch (e) {
+      }
+    },
+    submit(){
+      return false;
+    }
   }
 }
 </script>

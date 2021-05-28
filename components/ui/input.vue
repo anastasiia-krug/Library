@@ -3,16 +3,20 @@
     <div class="input_icon">
       <svg-icon :name="icon" />
     </div>
-    <input class="input_input p" :placeholder="input_placeholder">
+    <input :type="type" class="input_input p" :placeholder="input_placeholder"
+           v-bind:value="value"
+           v-on:input="$emit('input', $event.target.value)">
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    icon: '',
-    input_placeholder: ''
-  }
+  props: [
+    'icon',
+    'input_placeholder',
+    'value',
+    'type'
+  ]
 }
 </script>
 

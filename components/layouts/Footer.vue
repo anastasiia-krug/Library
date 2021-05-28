@@ -16,7 +16,7 @@
               <nuxt-link class="footer_nav-link h4" to="">Пользовательское соглашение</nuxt-link>
             </div>
           </div>
-          <Search class="footer_search" />
+<!--          <Search class="footer_search" />-->
         </div>
       </div>
     </div>

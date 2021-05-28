@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <Header v-bind:class="{'header-secondary':$route.name!=='index'}" />
-    <Nuxt />
-<!--        v-bind:class="{'background-blurring':true}" -->
-
-    <Footer v-if="$route.name!=='auth-SignIn' && $route.name!=='auth-SignUp'" />
-<!--    <SignIn />-->
-<!--    <SignUp />-->
+  <div v-bind:class="{'blurring-scroll':dialog && dialog.length>0 && !$auth.loggedIn}">
+    <Header v-bind:class="{'header-secondary':$route.name!=='index'||scrollTop>100}"/>
+      <div v-on:click="noDialog">
+        <Nuxt v-bind:class="{'background-blurring':dialog && dialog.length>0 && !$auth.loggedIn}"/>
+      </div>
+    <Footer v-if="$route.name!=='auth-SignIn' && $route.name!=='auth-SignUp'"/>
+    <SignIn v-if="dialog&&dialog === 'SignIn' && !$auth.loggedIn"/>
+    <SignUp v-if="dialog&&dialog === 'SignUp' && !$auth.loggedIn"/>
   </div>
 </template>
 
@@ -22,9 +22,36 @@ export default {
     Footer,
     SignIn,
     SignUp
-  }, mounted() {
-    console.log(this.$route)
-  }
+  },
+  data(){
+    return {
+      scrollTop: 0,
+    }
+  },
+  computed: {
+    dialog() {
+      return this.$store.getters.dialog
+    }
+  },
+  methods: {
+    async noDialog() {
+      try {
+        await this.$store.dispatch('getDialog', {
+          dialog: '',
+        })
+      } catch (e) {
+      }
+    },
+    handleScroll () {
+      this.scrollTop = window.scrollY;
+    }
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
 }
 </script>
 
@@ -35,7 +62,7 @@ export default {
   border: 0;
 }
 
-*,*:before,*:after{
+*, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -143,5 +170,18 @@ export default {
   filter: blur(4rem);
   height: 100%;
   background: rgba(33, 33, 33, 0.22);
+}
+
+.blurring-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.not-active {
+  background: rgb(110 224 213);
+}
+
+.active {
+  background: #267b73;
 }
 </style>

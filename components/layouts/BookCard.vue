@@ -1,28 +1,59 @@
 <template>
   <div class="book-card">
     <div class="book-card_left">
-      <img class="book-card_img" src="../../assets/img/harry_potter_and_the_philosophers_stone.png"
+      <img class="book-card_img" :src="book.image"
            alt="Harry Potter and the philosopher's stone">
-      <button class="book-card_button button span">Подробнее...</button>
+      <button class="book-card_button button span not-active" v-if="!$auth.loggedIn">Взять</button>
+      <button class="book-card_button button span" v-else-if="$auth.loggedIn && !book.user" v-on:click="getBook()">Взять</button>
+      <button class="book-card_button button span active" v-else-if="$auth.loggedIn && book.user" v-on:click="returnBook()">Вернуть</button>
     </div>
     <div class="book-card_right">
       <div class="book-card_right-top">
-        <h3 class="book-card_h3 h3-bold">Гарри Поттер и философский камень</h3>
-        <p class="book-card_p p">Одиннадцатилетний мальчик-сирота живет в семье тетки и даже не подозревает, что он — волшебник...
-
-          И однажды, ему приходит письмо, изменив его жизнь навсегда...</p>
-        <p class="book-card_caption">Джоан Роулинг</p>
+        <h3 class="book-card_h3 h3-bold">{{ book.title }}</h3>
+        <p class="book-card_p p">{{book.preview}}</p>
+        <p class="book-card_caption">{{book.author}}</p>
       </div>
       <div class="book-card_right-bottom">
-        <div class="book-card_genre h4">Фэнтези</div>
-        <div class="book-card_price h4-bold">620 ₴</div>
+        <div class="book-card_genre h4">{{book.category.title}}</div>
+<!--        <div class="book-card_price h4-bold">620 ₴</div>-->
       </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  props:{
+    book: {},
+    current_page: {}
+  },
+  methods:{
+    async getBook(){
+      try {
+        await this.$store.dispatch('getBooks', {
+          count: 8,
+          page: this.current_page,
+          getBook: this.book.id
+        })
+      } catch (e) {}
+    },
+    async returnBook(){
+      try {
+        await this.$store.dispatch('getBooks', {
+          count: 8,
+          page: this.current_page,
+          returnBook: this.book.id
+        })
+      } catch (e) {}
+    }
+  }
+}
+</script>
+
 <style>
 .book-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   width: 27rem;
   height: 18.125rem;
@@ -42,6 +73,8 @@
   top: 0;
   z-index: 2;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .book-card_button {
@@ -92,9 +125,15 @@
   line-height: 0.875rem;
   text-align: right;
   color: #A9A9A9;
+
+  position: absolute;
+  bottom: 2.75rem;
+  right: 1rem;
 }
 
 .book-card_right-bottom {
+  position: absolute;
+  bottom:0;
   display: flex;
   width: 16rem;
   border-top: 0.0625rem solid #F2F2F2;
@@ -102,8 +141,9 @@
 }
 
 .book-card_genre {
-  width: 75%;
-  border-right: 0.0625rem solid #F2F2F2;
+  /*width: 75%;*/
+  width: 100%;
+  /*border-right: 0.0625rem solid #F2F2F2;*/
   color: #4F4F4F;
   text-align: center;
 }

@@ -26,14 +26,55 @@ export default {
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
-
+    modules: [
+        '@nuxtjs/auth',
+        '@nuxtjs/axios',
+        '@nuxtjs/proxy',
+        '@nuxtjs/dotenv',
+    ],
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: ['@nuxtjs/svg-sprite'],
-    svgSprite: {
-        // manipulate module options
-        // input: '~/assets/sprite/svg/'
-        // input: '~/assets/svg/svg',
-        // output: '~/assets/svg/sprite'
+    svgSprite: {},
+
+    auth: {
+        strategies: {
+            local: {
+                endpoints: {
+                    login: {
+                        url: '/login',
+                        method: 'post'
+                    },
+                    logout: {
+                        url: '/logout',
+                        method: 'post'
+                    },
+                    register: {
+                        url: '/register',
+                        method: 'post'
+                    },
+                    user: {
+                        url: '/api/user',
+                        method: 'get',
+                        propertyName: false
+                    }
+                },
+                tokenRequired: false,
+                tokenType: false
+            }
+        }
+    },
+
+    proxy: {
+        '/images': {
+            target: process.env.API_URL + '/storage'
+        },
+    },
+    axios: {
+        defaults: {
+            baseURL: process.env.API_URL
+        },
+        withCredentials: true,
+        credentials: true
     },
 }
-    // Modules: https://go.nuxt
+// Modules: https://go.nuxt

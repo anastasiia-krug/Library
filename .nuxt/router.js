@@ -4,9 +4,9 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _1df7e39a = () => interopDefault(import('../node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue' /* webpackChunkName: "" */))
-const _ddf76722 = () => interopDefault(import('../pages/all-books.vue' /* webpackChunkName: "pages/all-books" */))
-const _2853e77a = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _6ea811f4 = () => interopDefault(import('../node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue' /* webpackChunkName: "" */))
+const _5e39700e = () => interopDefault(import('../pages/all-books.vue' /* webpackChunkName: "pages/all-books" */))
+const _fd98513c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -21,15 +21,15 @@ export const routerOptions = {
 
   routes: [{
     path: "/_icons",
-    component: _1df7e39a,
+    component: _6ea811f4,
     name: "icons-list"
   }, {
     path: "/all-books",
-    component: _ddf76722,
+    component: _5e39700e,
     name: "all-books"
   }, {
     path: "/",
-    component: _2853e77a,
+    component: _fd98513c,
     name: "index"
   }],
 

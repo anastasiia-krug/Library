@@ -4,16 +4,22 @@
       <div class="wrapper">
         <h1 class="first-screen_h1 h1-bold">Что такое Books Academy?</h1>
         <div class="first-screen_hr"></div>
-        <p class="first-screen_text h4">Войдите в светлый мир двенадцатилетнего мальчика и проживите с ним лето, наполненное радостными и печальными, загадочными и тревожными событиями.
+        <p class="first-screen_text h4">
+          Books Academy — это онлайн библиотека для студентов, которая помогает найти и прочитать любую книгу
 
-          Лето, когда каждый день совершаются удивительные открытия, главное из которых - ты живой, ты дышишь, ты чувствуешь!</p>
+          Научные статьи, Детективы, Фэнтэзи, Приключения и многое другое вы найдёте на Books Academy!
+<!--          Войдите в светлый мир двенадцатилетнего мальчика и проживите с ним лето, наполненное радостными и печальными, загадочными и тревожными событиями.-->
+
+<!--          Лето, когда каждый день совершаются удивительные открытия, главное из которых - ты живой, ты дышишь, ты чувствуешь!-->
+        </p>
         <div class="first-screen_left-text"></div>
-        <button class="first-screen_left-button button p">Читать</button>
+
+        <nuxt-link to="/all-books" class="first-screen_left-button button p"><button class="first-screen_left-button button p">Все книги</button></nuxt-link>
       </div>
     </div>
     <div class="first-screen_left-background"></div>
     <div class="first-screen_right">
-      <button class="first-screen_right-button button p">Ещё</button>
+      <nuxt-link to="/all-books" class="button p"><button class="first-screen_right-button button p">Ещё</button></nuxt-link>
     </div>
   </section>
 </template>

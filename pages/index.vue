@@ -1,8 +1,8 @@
 <template>
   <div>
-    <FirstScreen />
-    <Books />
-    <Authors />
+    <FirstScreen/>
+    <Books/>
+    <!--    <Authors />-->
   </div>
 </template>
 
@@ -17,6 +17,14 @@ export default {
     Books,
     Authors
   },
+  async mounted() {
+    try {
+      await this.$store.dispatch('getBooks', {
+        count: 8,
+        page: 1,
+      })
+    } catch (e) {}
+  }
 }
 </script>
 
