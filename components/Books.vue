@@ -11,7 +11,7 @@
     <!--    </div>-->
     <div class="wrapper">
       <div class="all-books_cards-container">
-        <BookCard v-for="(book,book_key) in books.data" :book="book" :current_page="books.current_page"/>
+        <BookCard :key="book_key" v-for="(book,book_key) in books.data" :book="book" :current_page="books.current_page"/>
       </div>
     </div>
 

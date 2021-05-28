@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"API_URL":"http://pro-battle.local:8000"}
+      env: {"API_URL":"http://library.local:8000"}
     }
     // Only set once
 
