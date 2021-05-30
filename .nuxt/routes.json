@@ -2,21 +2,21 @@
   {
     "name": "icons-list",
     "path": "/_icons",
-    "component": "/Users/tellor/PhpstormProjects/Library/node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue",
-    "_name": "_6ea811f4"
+    "component": "/opt/lampp/htdocs/node_modules/@nuxtjs/svg-sprite/lib/pages/icons-list.vue",
+    "_name": "_1df7e39a"
   },
   {
     "name": "all-books",
     "path": "/all-books",
-    "component": "/Users/tellor/PhpstormProjects/Library/pages/all-books.vue",
+    "component": "/opt/lampp/htdocs/pages/all-books.vue",
     "chunkName": "pages/all-books",
-    "_name": "_5e39700e"
+    "_name": "_ddf76722"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/tellor/PhpstormProjects/Library/pages/index.vue",
+    "component": "/opt/lampp/htdocs/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_fd98513c"
+    "_name": "_2853e77a"
   }
 ]

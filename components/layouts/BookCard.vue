@@ -1,7 +1,7 @@
 <template>
   <div class="book-card">
     <div class="book-card_left">
-      <img class="book-card_img" :src="book.image"
+      <img class="book-card_img" :src="book.image&&book.image.length>0&&photo_error()?book.image:'/nofoto.png'"
            alt="Harry Potter and the philosopher's stone">
       <button class="book-card_button button span not-active" v-if="!$auth.loggedIn">Взять</button>
       <button class="book-card_button button span" v-else-if="$auth.loggedIn && !book.user" v-on:click="getBook()">Взять</button>
@@ -28,6 +28,16 @@ export default {
     current_page: {}
   },
   methods:{
+    photo_error(){
+      var img = new Image();
+      img.src = this.book.image;
+      img.onload = function(){
+        return true;
+      };
+      return false;
+      // img.onerror = function(){alert('картинка не существует')};
+
+    },
     async getBook(){
       try {
         await this.$store.dispatch('getBooks', {

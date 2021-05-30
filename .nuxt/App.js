@@ -6,7 +6,7 @@ import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import _1c3006c4 from './layouts.svg-sprite.d2b47628.vue'
+import _1c3006c4 from './layouts.svg-sprite.1c18a52a.vue'
 import _6f6c098b from '../layouts/default.vue'
 
 const layouts = { "_svg-sprite": sanitizeComponent(_1c3006c4),"_default": sanitizeComponent(_6f6c098b) }
