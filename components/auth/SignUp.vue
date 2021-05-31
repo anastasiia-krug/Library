@@ -2,9 +2,9 @@
   <div class="sign-up">
     <h2 class="sign-up_h2 h2-bold">Регистрация</h2>
     <ui_input icon="name" input_placeholder="E-mail" v-model="form.email" class="sign-up_input" type="email"/>
-    <ui_input icon="door-key" input_placeholder="Пароль"v-model="form.password" class="sign-up_input" type="password"/>
+    <ui_input icon="door-key" input_placeholder="Пароль" v-model="form.password" class="sign-up_input" type="password"/>
     <ui_input icon="lock" input_placeholder="Повторите пароль" v-model="form.passwordRepeat" class="sign-up_input" type="password"/>
-    <ui_input icon="tickets-couple" input_placeholder="Читательский билет" v-model="form.library_сard" class="sign-up_input" type="text"/>
+    <ui_input icon="tickets-couple" input_placeholder="Читательский билет" v-model="form.library_card" class="sign-up_input" type="text"/>
     <button class="sign-up_button button p" v-on:click="signUp()">Зарегистрироваться</button>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
         email:'',
         password: '',
         passwordRepeat: '',
-        library_сard: '',
+        library_card: '',
       }
     }
   },
